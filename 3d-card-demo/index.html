@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3‑D Tilt‑Flip Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="grid">
+    <!-- 👇 Duplicate or edit cards as needed -->
+    <article class="card"
+         tabindex="0"
+         data-headings="Mountains|Everest|K2|Annapurna"
+         data-descriptions="The Himalaya has all 14 eight‑thousanders|Everest is 8 848 m tall|K2 is the world’s most technical 8 000‑er|Annapurna has the highest fatality rate">
+  <div class="card__inner">
+    <div class="face front">
+      <h2></h2> <!-- Empty: JS will insert heading -->
+      <img src="https://picsum.photos/240/160?random=1" alt="" />
+    </div>
+    <div class="face back">
+      <h3>Fun fact</h3>
+      <p class="extra-text"></p> <!-- JS inserts description -->
+      <button class="expand-btn" aria-expanded="false">More Info</button>
+    </div>
+  </div>
+</article>
+
+
+    <!-- add more <article class="card">…</article> blocks here -->
+  </main>
+
+  <button id="themeToggle" class="theme-btn">🌓</button>
+
+  <script src="tilt.js" type="module"></script>
+  <audio id="flip-sound" src="https://www.soundjay.com/buttons/sounds/button-29.mp3" preload="auto"></audio>
+</body>
+</html>
